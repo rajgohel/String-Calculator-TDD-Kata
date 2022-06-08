@@ -17,9 +17,10 @@ function add(stringNumbers) {
     if (stringNumbers.startsWith("//")) {
         // let delimiters = stringNumbers.split("//")[1].split("\n")[0];
         numbers = splitNumbers(/[^\w\s]/gi, stringNumbers.split("\n")[1]);
-        return calculateNumbers(numbers);
     }
-    numbers = splitNumbers(/(\r\n|\n|\r)/gm, stringNumbers);
+    else {
+        numbers = splitNumbers(/(\r\n|\n|\r)/gm, stringNumbers);
+    }
     return calculateNumbers(numbers);
 
 }
